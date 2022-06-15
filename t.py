@@ -47,7 +47,7 @@ class Updates:
                         itemDescription = itemInfo['Description']
                         itemUpdated = itemInfo['Updated'].split('T')[0]
 
-                        if itemUpdated == str(datetime.now() - timedelta(hours=1)).split(' ')[0]:
+                        if itemUpdated == str(datetime.now() - timedelta(hours=1)).split(' ')[0]: # another check because for some reason roblox sometimes returns the 60 updated items missing 1, so it would send an item which actually wasnt updated
 
                             data = {
                             'content': f'<@{config["discord_id"]}>',
